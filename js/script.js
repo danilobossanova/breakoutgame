@@ -13,7 +13,7 @@ const speedIncrement = 0.1;
 
 // Configurações da raquete
 let paddleHeight = 5;
-let paddleWidth = 100;
+let paddleWidth = 180;
 let paddleX = (canvas.width - paddleWidth) / 2;
 
 // Controle de teclas
@@ -44,7 +44,7 @@ for(let c = 0; c < brickColumnCount; c++) {
 
 // Contadores
 let score = 0;
-let lives = 3;
+let lives = 50;
 
 // Adiciona event listeners para os controles da raquete
 document.addEventListener("keydown", keyDownHandler, false);
@@ -98,7 +98,7 @@ function collisionDetection() {
                             b.status = 0;
                             score++;
                             if(score % brickColumnCount == 0) {
-                                paddleWidth += 10;
+                                paddleWidth += 15;
                                 sizeDisplay.textContent = `Tamanho da Raquete: ${paddleWidth}`;
                             }
                             increaseBallSpeed();
